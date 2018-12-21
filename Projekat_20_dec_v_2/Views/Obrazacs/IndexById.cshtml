@@ -1,0 +1,114 @@
+﻿@model Projekat_20_dec_v_2.Models.Obrazac
+
+@{
+    ViewBag.Title = "IndexById";
+}
+
+<h2>Podaci - Skola</h2>
+
+
+<div>
+    <h2>@Model.NazivSkole</h2>
+    <table class="table table-bordered table-condensed table-striped">
+        <tr>
+            <td>ID skole </td>
+            <td>@Model.IdSkole</td>
+        </tr>
+        <tr>
+            <td>Adresa Skole :</td>
+            <td>@Model.Adresa</td>
+        </tr>
+    </table>
+    <table class="table table-bordered table-condensed table-striped">
+        <tr>
+            <td>
+                <table class="table table-bordered table-condensed table-striped">
+                    <tr>
+                        <td colspan="2">Informacije o skoli</td>
+                    </tr>
+                    <tr>
+                        <td>Opstina</td>
+                        <td>@Model.Opstina</td>
+                    </tr>
+                    <tr>
+                        <td>Postanski Broj</td>
+                        <td>@Model.PostanskiBroj</td>
+                    </tr>
+                    <tr>
+                        <td>Maticni Broj Skole</td>
+                        <td>@Model.Maticni_Broj_Skole</td>
+                    </tr>
+                    <tr>
+                        <td>PIB</td>
+                        <td>@Model.Pib</td>
+                    </tr>
+                    <tr>
+                        <td>Broj Racuna Skole</td>
+                        <td>@Model.BrojRacunaSkole</td>
+                    </tr>
+                    <tr>
+                        <td>Website</td>
+                        <td>@Model.Website</td>
+                    </tr>
+
+                    <tr>
+                        <td>Beleska</td>
+                        <td>
+                            @Model.Beleska
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <table class="table table-bordered table-condensed table-striped">
+                <tr>
+                    <td colspan="2">
+                        <b>Kontakt Osoba</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ime</td>
+                    <td>@Model.ime</td>
+                </tr>
+                <tr>
+                    <td>Prezime</td>
+                    <td>@Model.prezime</td>
+                </tr>
+                <tr>
+                    <td>Radno Mesto</td>
+                    <td>@Model.radno_mesto</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><b>Telefon</b></td>
+            
+                </tr>
+                <tr>
+                     <td>Oznaka tipa</td>
+                     <td>@Model.oznaka_tipa</td>
+                </tr>
+                    <tr>
+                        <td>Broj Telefona</td>
+                        <td>@Model.broj_telefona</td>
+                    </tr>
+                    <tr>
+                        <td>Lokal</td>
+                        <td>@Model.lokal</td>
+                    </tr>
+                <tr>
+                    <td colspan ="2"><b>Email</b></td>
+                    
+                </tr>
+                    <tr>
+                        <td>Oznaka tipa</td>
+                        <td>@Model.oznaka_tipa_mail</td>
+                    </tr>
+                    <tr>
+                        <td>Email Adresa</td>
+                        <td>@Model.Email_adresa</td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>

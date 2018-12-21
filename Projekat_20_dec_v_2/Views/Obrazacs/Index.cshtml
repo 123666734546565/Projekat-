@@ -1,0 +1,155 @@
+﻿@model IEnumerable<Projekat_20_dec_v_2.Models.Obrazac>
+
+@{
+    ViewBag.Title = "Index";
+
+}
+
+<h2>Podaci o Skolama</h2>
+
+<p>
+<p style="padding: 10px; background-color: lightgrey; border-radius: 10px;">
+
+    @Html.ActionLink("Dodaj novu skolu", "Create") |
+
+    @Html.ActionLink("Stampaj listu", "PrintAll")
+</p>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NazivSkole)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Adresa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Opstina)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PostanskiBroj)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Maticni_Broj_Skole)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pib)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BrojRacunaSkole)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Website)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Beleska)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.prezime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.radno_mesto)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.oznaka_tipa)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.broj_telefona)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lokal)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.oznaka_tipa_mail)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Email_adresa)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NazivSkole)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Adresa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Opstina)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PostanskiBroj)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Maticni_Broj_Skole)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pib)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BrojRacunaSkole)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Website)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Beleska)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.prezime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.radno_mesto)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.oznaka_tipa)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.broj_telefona)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lokal)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.oznaka_tipa_mail)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Email_adresa)
+            </td>
+            <td>
+            <td>
+                @Html.ActionLink("Izmeni", "Edit", new { id = item.IdSkole })
+            </td>
+            <td>
+                @Html.ActionLink("Detalji", "Details", new { id = item.IdSkole })
+            </td>
+            <td>
+                @Html.ActionLink("Stampaj", "PrintSchool", new { id = item.IdSkole })
+            </td>
+            <td>
+                @Html.ActionLink("Obrisi", "Delete", new { id = item.IdSkole })
+            </td>
+            </td>
+        </tr>
+    }
+
+</table>
+
+
